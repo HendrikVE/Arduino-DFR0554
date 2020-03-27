@@ -3,6 +3,16 @@
 This library was developed and tested on an esp32, but should work for every
 other board as well.
 
+## Dependecies
+
+Because this library is only a wrapper around 2 different drivers and does not
+implement any hardware communication, you need to fullfill the following
+depedencies:
+- [ArduinoPCA9633](https://github.com/HendrikVE/ArduinoPCA9633)
+  (search for `PCA9633` in the Arduino Library Manager)
+- [ArduinoLiquidCrystalWired](https://github.com/HendrikVE/ArduinoLiquidCrystalWired)
+  (search for `LiquidCrystalWired` in the Arduino Library Manager)
+
 ## API overview:
 ```cpp
     /**
