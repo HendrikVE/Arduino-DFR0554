@@ -125,6 +125,18 @@ void DFR0554::printCustomSymbol(CustomSymbol customSymbol) {
     _lcd.printCustomSymbol(customSymbol);
 }
 
+void DFR0554::setProgressBarEnabled(bool enabled) {
+    _lcd.setProgressBarEnabled(enabled);
+}
+
+void DFR0554::setProgressBarRow(uint8_t row) {
+    _lcd.setProgressBarRow(row);
+}
+
+void DFR0554::setProgress(float progress) {
+    _lcd.setProgress(progress);
+}
+
 inline size_t DFR0554::write(uint8_t value) {
     return _lcd.write(value);
 }

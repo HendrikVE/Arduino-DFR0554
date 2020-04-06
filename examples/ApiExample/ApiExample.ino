@@ -165,6 +165,22 @@ void lcd() {
     }
 
     dfr0554.clear();
+
+    // 9. progress bar
+    dfr0554.setProgressBarEnabled(true);
+    dfr0554.setCursorPosition(0, 0);
+    dfr0554.print("Progress: ");
+
+    for (int j = 0; j <= 100; j++) {
+
+        dfr0554.setCursorPosition(0, 10);
+        dfr0554.printf("%d %%", j);
+
+        dfr0554.setProgress(j);
+        delay(100);
+    }
+    dfr0554.setProgressBarEnabled(false);
+    dfr0554.clear();
 }
 
 void rgb() {
