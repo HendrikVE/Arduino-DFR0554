@@ -267,6 +267,11 @@ void setup() {
     dfr0554.begin(&Wire);
 
     dfr0554.setCustomSymbol(CUSTOM_SYMBOL_1, customCharHeart);
+
+    dfr0554.turnOn();
+    dfr0554.setLdrStateAll(LDR_STATE_IND_GRP);
+    dfr0554.setGroupControlMode(GROUP_CONTROL_MODE_DIMMING);
+    dfr0554.setRGB(255, 255, 255);
 }
 
 void loop() {
