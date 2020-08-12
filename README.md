@@ -7,11 +7,9 @@ other board as well.
 
 Because this library is only a wrapper around 2 different drivers and does not
 implement any hardware communication, you need to fullfill the following
-depedencies:
-- [ArduinoPCA9633](https://github.com/HendrikVE/ArduinoPCA9633)
-  (search for `PCA9633` in the Arduino Library Manager)
-- [ArduinoLiquidCrystalWired](https://github.com/HendrikVE/ArduinoLiquidCrystalWired)
-  (search for `LiquidCrystalWired` in the Arduino Library Manager)
+depedencies (they will be installed automatically if this library was installed by the Arduino Library Manager):
+- [Arduino-PCA9633](https://github.com/HendrikVE/ArduinoPCA9633)
+- [Arduino-LiquidCrystalWired](https://github.com/HendrikVE/ArduinoLiquidCrystalWired)
 
 ## API overview:
 ```cpp
