@@ -174,7 +174,15 @@ void lcd() {
     for (int j = 0; j <= 100; j++) {
 
         dfr0554.setCursorPosition(0, 10);
-        dfr0554.printf("%d %%", j);
+
+        #ifdef __AVR__
+            char string_rep[6];
+            sprintf(string_rep, "%d %%", j);
+            dfr0554.print(string_rep);
+        #else
+            // on an esp32 you can use printf instead
+            dfr0554.printf("%d %%", j);
+        #endif
 
         dfr0554.setProgress(j);
         delay(100);
